@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% block body %}
+
+<div class="block1">
+<h1>{{title}}</h1>
+  <h2>Why Flask? </h2>
+  <ul style="display:contents;">
+  <li>easy to use.</li>
+  <li>built in development server and debugger</li>
+  <li>integrated unit testing support</li>
+  <li>RESTful request dispatching</li>
+  <li>uses Jinja2 templating</li>
+  <li>support for secure cookies (client side sessions)</li>
+  <li>100% WSGI 1.0 compliant</li>
+  <li>Unicode based</li>
+  <li>extensively documented</li>
+  </ul>
+
+  <p>Example: Templates and Passing variables</p>
+  <p>Usage: Type in the following URL /hello/NAME/ like this <a href="/hello/Ryan/">Hello Ryan</a></p>
+<img src="{{url_for('static', filename='flask.jpg')}}">
+</div>
+{% endblock %}
