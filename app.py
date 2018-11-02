@@ -1,9 +1,11 @@
+import os
 from flask import Flask, flash, redirect, render_template
 from random import randint
 
 app = Flask(__name__)
 app.config["DEBUG"] = True
 
+# app configuration
 app.config.from_object(os.environ['APP_SETTINGS'])
 
 @app.route("/")
